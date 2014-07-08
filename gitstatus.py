@@ -64,11 +64,11 @@ else:
 
 out = '\n'.join([
 	branch.decode("utf-8"),
-	remote,
-	staged,
-	conflicts,
-	changed,
-	untracked,
-	clean])
+	remote.decode("utf-8"),
+	staged.decode("utf-8"),
+	conflicts.decode("utf-8"),
+	changed.decode("utf-8"),
+	untracked.decode("utf-8"),
+	clean.decode("utf-8")])
 print(out)
 
