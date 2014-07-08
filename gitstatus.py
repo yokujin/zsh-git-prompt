@@ -70,5 +70,5 @@ out = '\n'.join([
 	changed.decode("utf-8"),
 	untracked.decode("utf-8"),
 	clean.decode("utf-8")])
-print(out)
+print(out.encode("utf-8"))
 
