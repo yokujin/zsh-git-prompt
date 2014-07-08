@@ -63,12 +63,12 @@ else:
 			remote += '%s%s' % (symbols['ahead of'], ahead)
 
 out = '\n'.join([
-	branch.decode("utf-8"),
-	remote.decode("utf-8"),
-	staged.decode("utf-8"),
-	conflicts.decode("utf-8"),
-	changed.decode("utf-8"),
-	untracked.decode("utf-8"),
-	clean.decode("utf-8")])
-print(out.encode("utf-8"))
+	branch if branch.__class__==str else branch.decode("utf-8"),
+	remote if remote.__class__==str else remote.decode("utf-8"),
+	staged if staged.__class__==str else staged.decode("utf-8"),
+	conflicts if conflicts.__class__==str else conflicts.decode("utf-8"),
+	changed if changed.__class__==str else changed.decode("utf-8"),
+	untracked if untracked.__class__==str else untracked.decode("utf-8"),
+	clean if clean.__class__==str else clean.decode("utf-8")])
+print(out)
 
